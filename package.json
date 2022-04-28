@@ -1,10 +1,13 @@
 {
-  "name": "@discord-factory/core-next",
-  "version": "3.0.0",
-  "description": "",
+  "name": "@sportek/core-next-sportek",
+  "version": "1.0.19",
+  "description": "The `@discord-factory/core-next` module is the core project of the Discord Factory framework.\r It handles everything related to project initialization, slash command registration within Discord and the instantiation of the Discord client.",
   "author": "Baptiste Parmantier <baptiste.parmantier.pro@gmail.com>",
   "license": "MIT",
-  "repository": "git@github.com:DiscordFactory/Core.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/DiscordFactory/Core.git"
+  },
   "keywords": [],
   "main": "./build/index.js",
   "scripts": {
@@ -28,6 +31,7 @@
     "@leadcodedev/logger": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.1",
+    "axios": "^0.26.1",
     "cac": "^6.7.8",
     "cli-table2": "^0.2.0",
     "cross-env": "^7.0.3",
@@ -47,5 +51,13 @@
       "test/**/*.spec.ts"
     ],
     "verbose": true
+  },
+  "bugs": {
+    "url": "https://github.com/DiscordFactory/Core/issues"
+  },
+  "homepage": "https://github.com/DiscordFactory/Core#readme",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
   }
 }

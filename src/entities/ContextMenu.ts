@@ -11,7 +11,7 @@ export function ContextMenu (ctx: ApplicationGlobalContext) {
         super(
           context,
           ctx.scope,
-          ctx.permissions,
+          //ctx.permissions,
           ctx.cooldown?.count || ctx.cooldown?.time
             ? new Cooldown(ctx.cooldown)
             : undefined,
@@ -29,7 +29,7 @@ export class ContextMenuEntity extends Constructable<any> {
   constructor (
     public context: AddonContext<any> | undefined,
     public scope: ScopeContext,
-    public permissions: ApplicationCommandPermissionData[] = [],
+    //public permissions: ApplicationCommandPermissionData[] = [],
     public cooldown: Cooldown | undefined,
     public ctx: ApplicationContextOption,
     public run: (...args: any[]) => Promise<void>,
