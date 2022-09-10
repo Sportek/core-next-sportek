@@ -19,5 +19,6 @@ export interface CliCommand extends CliCommandContext {
 export abstract class BaseCli<Addon> {
   public abstract run (context: CliContextRuntime): Promise<void>
   protected constructor (public context: AddonContext<Addon> | undefined) {
+
   }
 }

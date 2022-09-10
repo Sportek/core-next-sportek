@@ -12,7 +12,7 @@ import NodeEmitter from '../../utils/NodeEmitter'
 import { ProviderEntity } from '../../entities/Provider'
 import EntityFile from '../../utils/EntityFile'
 import BaseCommandManager from '../BaseCommandManager'
-import { catchPromise } from '../../utils'
+import { catchPromise, isEquivalent } from '../../utils'
 import Logger from '@leadcodedev/logger'
 
 export default class SlashCommandManager {
@@ -98,14 +98,14 @@ export default class SlashCommandManager {
         commandEntities.splice(commandEntityIndex, 1)
       }
 
-      // if (!isEquivalent(this.serialize(commandEntity.ctx as any), this.serialize(command))) {
-      //   manager
-      //     .edit(command.id, {
-      //       ...commandEntity.ctx,
-      //       defaultPermission: commandEntity.permissions.length === 0
-      //     })
-      //     .catch(catchPromise)
-      // }
+      if (!isEquivalent(this.serialize(commandEntity.ctx as any), this.serialize(command))) {
+        manager
+          .edit(command.id, {
+            ...commandEntity.ctx,
+            //defaultPermission: commandEntity.permissions.length === 0
+          })
+          .catch(catchPromise)
+      }
 
       // const definePermission = () => {
       //   const permissions = {

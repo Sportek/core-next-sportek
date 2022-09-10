@@ -1,6 +1,6 @@
 {
   "name": "@sportek/core-next-sportek",
-  "version": "1.0.19",
+  "version": "1.0.21",
   "description": "The `@discord-factory/core-next` module is the core project of the Discord Factory framework.\r It handles everything related to project initialization, slash command registration within Discord and the instantiation of the Discord client.",
   "author": "Baptiste Parmantier <baptiste.parmantier.pro@gmail.com>",
   "license": "MIT",

@@ -26,6 +26,7 @@ export default class BaseCommandManager {
       await guild.commands.fetch()
     } catch (error: any) {
       if (error.httpStatus === 403) {
+        Logger.send("error", error)
         Logger.send('warn', `The guild "${guild.name}" (${guild.id}) does not accept command applications (scope : applications.commands).`)
         return
       }
